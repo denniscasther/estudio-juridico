@@ -1,0 +1,713 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: #1d1d1d;
+    padding: 10px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  /* Flex container del header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Contenedor del header */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  .logo-nav {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-nav:hover {
+    transform: scale(1.05);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #FFD700;
+  }
+
+  /* Redes sociales */
+  .redes-sociales {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .redes-sociales a img {
+    width: 20px;
+    height: 16px;
+    object-fit: contain;
+    vertical-align: middle;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Efecto general al pasar el mouse */
+  .redes-sociales a:hover img {
+    transform: scale(1.4);
+  }
+  
+  /* Estilos personalizados por red */
+  .redes-sociales a.facebook:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 6px #3b5998);
+  }
+  
+  .redes-sociales a.twitter:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 6px #1DA1F2);
+  }
+  
+  .redes-sociales a.whatsapp:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 6px #25D366);
+  }
+  
+  .redes-sociales a.tiktok:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 6px #ff0050);
+  }
+  
+  .redes-sociales a.youtube:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 6px #FF0000);
+  }
+  
+  .redes-sociales a.instagram:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 6px #C13584);
+  }
+  
+  .redes-sociales a.linkedin:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 6px #0077B5);
+  }
+  
+
+  /* BANNER */
+  .banner {
+    position: relative;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 20px;
+    min-height: 1200px;
+    text-align: left;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .banner-texto {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin-left: 60px;
+  }
+  
+  .banner .logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 120px;
+    height: auto;
+    z-index: 2;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .banner .logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #fff);
+  }
+  
+  .titulo-banner {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: shineText 1s ease-in-out forwards;
+    transition: text-shadow 0.3s ease;
+  }
+  
+  .titulo-banner:hover {
+    text-shadow: 0 0 15px #fff, 0 0 25px #FFD700;
+  }
+  
+  .frase-legal {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: typing 4s steps(20, end), blink 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+  }
+  
+  /* Botón Reserva */
+  .btn-reservar {
+    background: linear-gradient(135deg, #FFD700, #FFC107);
+    color: #1d1d1d;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: none;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  
+  .btn-reservar:hover {
+    background: linear-gradient(135deg, #e6c200, #e0a800);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    color: #000;
+  }
+  
+  
+  /* Animaciones */
+  @keyframes shineText {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+  
+  /* SECCIONES */
+  section {
+    padding: 60px 20px;
+  }
+  
+  #servicios, #galeria, #reserva {
+    background-color: #ffffff;
+  }
+  
+  #servicios h2, #galeria h2, #reserva h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1d1d1d;
+  }
+  
+  .imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .imagenes img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  /* RESERVA FORM */
+  #formulario-reserva {
+    margin-top: 20px;
+  }
+  
+  #formulario-reserva input, #formulario-reserva button {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  #formulario-reserva button {
+    background-color: #1d1d1d;
+    color: eeeeee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #formulario-reserva button:hover {
+    background-color: #333;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #1d1d1d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+/* SERVICIOS */
+  #servicios {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .servicios-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .servicio {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+  
+  .servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .servicio h3 {
+    font-size: 22px;
+    color: #1d1d1d;
+    margin-bottom: 10px;
+  }
+  
+  .servicio p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .btn-servicios {
+    margin-top: 40px;
+  }
+  
+  .btn-vermas {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-vermas:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+  
+
+  .servicio .btn-vermas {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #1d1d1d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .servicio .btn-vermas:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+  
+
+  .imagenes img {
+    width: 500px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .imagenes img:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  #calendario {
+    display: block !important;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  
+
+  .btn-hora {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .btn-hora:hover {
+    background-color: #ddd;
+  }
+
+  .btn-hora.seleccionado {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-color: #0056b3;
+  }
+
+
+  .form-reserva {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+
+  /* Estilos generales del contenedor */
+.formulario-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Título del formulario */
+  .formulario-titulo {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  /* Diseño de cada campo */
+  .campo-form {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .campo-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .campo-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .campo-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+  }
+  
+  /* Botón de confirmar reserva */
+  .btn-reservar {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-reservar:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+  }
+  
+  /* Area de Nosotros */
+  .nosotros-section {
+    text-align: center;
+    padding: 60px 30px;
+    background: #dcdcdc;
+    position: relative;
+  }
+
+  .titulo-nosotros {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #1d3557;
+    animation: fadeInDown 1s ease;
+  }
+
+  .descripcion-nosotros {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1.5s ease;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .logo-brillante {
+    width: 150px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .logo-brillante:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #ffcc00);
+  }
+
+  .contenedor-mision-vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .mision, .vision {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 300px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+  }
+
+  .animate-right {
+    animation: slideInRight 1.5s ease forwards;
+  }
+
+  .animate-left {
+    animation: slideInLeft 1.5s ease forwards;
+  }
+
+  .descargar-brochure {
+    margin-top: 40px;
+  }
+
+  .btn-descargar {
+    background: #1d3557;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .btn-descargar:hover {
+    background: #457b9d;
+  }
+
+  /* Animaciones */
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+
+ /* Footer */
+ .footer-seccion {
+    background-color: #1d1d1d; /* fondo negro como cabecera */
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .footer-info {
+    flex: 1 1 300px;
+  }
+
+  .footer-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+
+  .celular {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  .ubicacion-container iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  .direccion {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  .redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .redes-sociales a img {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .icono-brillante-img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px #ffcc00);
+  }
+
+  .footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .footer-contenido {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .ubicacion-container iframe {
+      height: 220px;
+    }
+
+    .redes-sociales {
+      justify-content: center;
+    }
+  }

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iuris et De Iure - Estudio Jurídico</title>
+    
+    <!-- FullCalendar CSS -->
+<!-- FullCalendar CSS -->
+<!-- FullCalendar CSS y JS (misma versión) -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+          <img src="img/logo.png" alt="Logo" class="logo-nav">
+          <nav>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#reserva">Reserva</a></li>
+            </ul>
+          </nav>
+          <div class="redes-sociales">
+            <a href="#" class="facebook"><img src="img/fb.png" alt="Facebook"></a>
+            <a href="#" class="twitter"><img src="img/twitter.png" alt="Twitter"></a>
+            <a href="#" class="whatsapp"><img src="img/wsp.png" alt="WhatsApp"></a>
+            <a href="#" class="tiktok"><img src="img/tiktok.png" alt="TikTok"></a>
+            <a href="#" class="youtube"><img src="img/ytb.png" alt="YouTube"></a>
+            <a href="#" class="instagram"><img src="img/inst.png" alt="Instagram"></a>
+            <a href="#" class="linkedin"><img src="img/lkdn.png" alt="LinkedIn"></a>
+          </div>
+          
+        </div>
+      </header>
+      
+
+    <!-- BANNER -->
+    <section class="banner" id="banner">
+        <div class="banner-background" id="banner-background"></div> <!-- Fondo dinámico -->
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <div class="banner-texto">
+          <h1 class="titulo-banner">Bienvenido al Estudio Jurídico Iuris et De Iure</h1>
+          <p class="frase-legal">“Donde el Derecho se convierte en Justicia”</p>
+          <a href="#reserva" class="btn-reservar">Reservar Cita en Línea</a>
+        </div>
+      </section>
+      
+      
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros-section">
+        <h2 class="titulo-nosotros">Nosotros</h2>
+        <p class="descripcion-nosotros">Somos un estudio jurídico especializado en brindar soluciones legales integrales con profesionalismo y ética.</p>
+      
+        <div class="logo-container">
+          <img src="img/logo.png" alt="Logo Estudio Jurídico" class="logo-brillante">
+        </div>
+      
+        <div class="contenedor-mision-vision">
+          <div class="mision animate-right">
+            <h3>Misión</h3>
+            <p>Brindar asesoría legal con ética, compromiso y excelencia para proteger los derechos de nuestros clientes.</p>
+          </div>
+          <div class="vision animate-left">
+            <h3>Visión</h3>
+            <p>Ser reconocidos como un referente jurídico por nuestra calidad, confianza y soluciones efectivas.</p>
+          </div>
+        </div>
+      
+        <div class="descargar-brochure">
+          <a href="docs/brochure.pdf" download class="btn-descargar">Descargar Brochure</a>
+        </div>
+      </section>
+      
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <h2>Nuestras Áreas de Práctica</h2>
+        <p>Asesoría legal en derecho civil, penal, laboral, comercial, corporativo, y más.</p>
+      
+        <div class="servicios-contenedor">
+          <div class="servicio">
+            <img src="img/derecho-penal.jpg" alt="Derecho Penal">
+            <h3>Derecho Penal</h3>
+            <p>Defendemos sus derechos en casos penales, asegurando un juicio justo y la mejor representación legal.</p>
+            <a href="#detalle-penal" class="btn-vermas">Ver más</a>
+          </div>
+      
+          <div class="servicio">
+            <img src="img/derecho-familiar.jpg" alt="Derecho Familiar">
+            <h3>Derecho Familiar</h3>
+            <p>Asesoría en divorcios, custodia y acuerdos prenupciales, protegiendo sus derechos y bienestar familiar.</p>
+            <a href="#detalle-familiar" class="btn-vermas">Ver más</a>
+          </div>
+        </div>
+      </section>
+      
+      
+
+    <!-- GALERÍA -->
+    <section id="galeria">
+        <h2>Nuestra Galería</h2>
+        <div class="imagenes">
+            <img src="img/foto1.jpg" alt="Foto 1">
+            <img src="img/foto2.jpg" alt="Foto 2">
+            <img src="img/foto3.jpg" alt="Foto 3">
+        </div>
+    </section>
+
+    <!-- CONTACTO 
+    <section id="contacto">
+        <h2>Contáctenos</h2>
+        <p>Dirección: Av. Justicia 123, Lima - Perú<br>
+        Teléfono: (01) 123 4567<br>
+        Email: contacto@iuris.com.pe</p>
+    </section>
+        -->
+    <!-- RESERVA -->
+  <!-- RESERVA -->
+  <section id="reserva">
+    <h2>Reserva tu Cita</h2>
+    <p>Seleccione una fecha para su reserva</p>
+  
+    <!-- Calendario -->
+    <div id="calendario" style="max-width: 900px; margin: 0 auto;"></div>
+  
+    <!-- Formulario de horarios -->
+    <div id="formulario-horario" style="display: none; margin-top: 20px;">
+      <h3>Selecciona un horario</h3>
+  
+      <h4>Horarios por la mañana</h4>
+      <div id="horarios-manana"></div>
+  
+      <h4>Horarios por la tarde</h4>
+      <div id="horarios-tarde"></div>
+    </div>
+  
+    <!-- Formulario de datos personales -->
+    <div id="formulario-datos" style="display: none;" class="formulario-container">
+        <h3 class="formulario-titulo">Reserva tu cita</h3>
+        <div class="campo-form">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+        </div>
+        <div class="campo-form">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" placeholder="Ej. juan@example.com" required>
+        </div>
+        <div class="campo-form">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" placeholder="Ej. 999 888 777" required>
+        </div>
+        <input type="hidden" id="hora-seleccionada">
+        <button id="confirmarReserva" class="btn-reservar">Confirmar Reserva</button>
+      </div>
+      
+      
+  </section>
+  
+  
+      
+      
+
+    <!-- FOOTER -->
+    <footer class="footer-seccion">
+        <div class="footer-contenido">
+          <div class="footer-info izquierda">
+            <h3>Centro de Atención</h3>
+            <p class="celular">📞 +51 987 654 321</p>
+          </div>
+      
+          <div class="footer-info ubicacion">
+            <h3>Ubicación</h3>
+            <div class="ubicacion-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=..." 
+                width="100%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <p class="direccion">Av. Los Abogados 123, Miraflores, Lima - Perú</p>
+            </div>
+          </div>
+      
+          <div class="footer-info redes-sociales-box">
+            <h3>Síguenos</h3>
+            <div class="redes-sociales">
+              <a href="#" class="facebook"><img src="img/fb.png" alt="Facebook" class="icono-brillante-img"></a>
+              <a href="#" class="twitter"><img src="img/twitter.png" alt="Twitter" class="icono-brillante-img"></a>
+              <a href="#" class="whatsapp"><img src="img/wsp.png" alt="WhatsApp" class="icono-brillante-img"></a>
+              <a href="#" class="tiktok"><img src="img/tiktok.png" alt="TikTok" class="icono-brillante-img"></a>
+              <a href="#" class="youtube"><img src="img/ytb.png" alt="YouTube" class="icono-brillante-img"></a>
+              <a href="#" class="instagram"><img src="img/inst.png" alt="Instagram" class="icono-brillante-img"></a>
+              <a href="#" class="linkedin"><img src="img/lkdn.png" alt="LinkedIn" class="icono-brillante-img"></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-copy">
+          <p>&copy; 2025 Iuris et De Iure - Erick Alcántara Abogados & Asociados</p>
+        </div>
+      </footer>
+      
+      
+
+    <!-- SCRIPTS -->
+  <!-- FullCalendar JS -->
+ 
+  <!-- index.html -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("74SydqY2INvmLpxD8"); // ✅ SOLO esto se queda aquí
+</script>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
